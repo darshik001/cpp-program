@@ -15,7 +15,7 @@ class Complex{
       x = a;
       y=  b;
 }
-  Complex operator+( Complex z){
+  Complex operator+( Complex&z){
     Complex t;
     t.x = x+z.x;
     t.y = y+z.y;
@@ -33,13 +33,21 @@ void printdata(){
 };
 
 int main(){
-   class Complex c1,c2,c3,c4;
+   class Complex c1,c2,c3,c4,c5;
+
    c1 =Complex(10,20);
    c1.printdata();
+
    c2 = Complex(30,40);
    c2.printdata();
- 
-   c3 = c1+c2;
+
+   c3 = Complex(50,60);
    c3.printdata();
+
+   c4 = Complex(70,80);
+    c4.printdata();
+    
+   c5 = c1+c2+c3+c4;
+   c5.printdata();
 
 }
